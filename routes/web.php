@@ -23,3 +23,7 @@ Route::get('/locations', function () {
 Route::get('/careers', function () {
     return view('careers');
 });
+
+Route::get('//low-fee-title-company', function () {
+    return view('whyus');
+});

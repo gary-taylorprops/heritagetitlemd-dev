@@ -10656,12 +10656,19 @@ a.text-dark:focus {
 }
 
 .layer {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+mark,
+.mark {
+  background-color: #eaab00 !important;
+  color: #ffffff !important;
+  padding: 0 !important;
 }
 
 @media (max-width: 767px) {
   footer {
-    text-align: center;
+    text-align: center !important;
   }
 }
 

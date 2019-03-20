@@ -1,39 +1,3 @@
-<!-- Footer -->
-<!--footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <a class="footer-logo" href="/"><img src="{{ asset('img/logos/HeritageTitle-white.png') }}" alt="Heritage Title Logo" style="max-width: 175px;"></a>
-      </div>
-      <div class="col-md-4">
-        <ul class="list-inline social-buttons">
-          <li class="list-inline-item">
-            <a href="https://www.facebook.com/Heritage-Title-Ltd-189929308173692/" target="_blank">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a href="https://www.linkedin.com/in/heritage-title-inc-37a00a92/" target="_blank">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-4">
-        <ul class="list-inline quicklinks">
-          <li class="list-inline-item">
-            <a href="#">Privacy Policy</a>
-          </li>
-          <li class="list-inline-item">
-            <a href="#">Terms of Use</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer-->
-
-
 <!--Footer-->
 <footer class="page-footer pt-4 center-on-small-only wow fadeIn" data-wow-delay="0.2s">
 
