@@ -13,16 +13,16 @@
 		position: inherit;
 	}
 	.container-fluid.header {
-	    background-image: url({{ asset('img/conference-room.jpg') }});
+	    background-image: url({{ asset('img/signing.jpg') }});
 	    background-size: cover;
-	    background-position: top center;
+	    background-position: center center;
 	}
 	.header-text {
 	    background-color: rgba(250,250,250,.9);
 	    width: 70%;
 	    min-width: 300px;
 	    padding: 10px;
-	    margin: 70px auto;
+	    margin: 100px auto;
 	}
 	.col-md-12.pricing {
 	    margin-bottom: 2em;
@@ -82,10 +82,10 @@
 	  display:table-cell;
 	}
 	.bg-yellow {
-	  border-top:3px solid #eaab00;
+	  border-top:3px solid #ffcd04;
 	}
 	.bg-red {
-	  border-top:3px solid #981e32;
+	  border-top:3px solid #ff8c42;
 	}
 	.sep {
 	  background:#F5F5F5;
@@ -93,7 +93,7 @@
 	}
 	.txt-l { font-size:28px; font-weight:bold; }
 	.txt-top { position:relative; top:-9px; left:-2px; }
-	.tick { font-size:18px; color:#2CA01C; }
+	.tick { font-size:18px; color:#ff8c42; }
 	.hide {
 	  border:0;
 	  background:none;
@@ -125,7 +125,7 @@
 			<h3>Average Closing Costs in Maryland</h3>
 			<p>Closing costs can be broken down into two categories: lender origination fees and third-party fees. <strong>The average closing costs in Maryland on a $200,000 loan, as of August 2015, amounted to $1,835, consisting of $1,153 in lender fees and $742 in third-party fees.</strong> While this figure included various service fees, the true total closing costs must include title fees, insurance, prepaid interest, taxes and escrow to be realistic. Typically, Maryland homebuyers should expect total closing costs to run between 2 to 5% of the property purchase price before adding real estate broker fees of up to 6%.</p>
 
-			<p>Heritage Financial beats the average cost of fees by offering a <strong>$695 flat fee</strong> for all HF services. See the detailed breakdown below.</p>
+			<p>Heritage Title beats the average cost of fees by offering a <strong>$695 flat fee</strong> for all Heritage Title services. See the detailed breakdown below.</p>
 		</div>
 	</div>
 </div>
@@ -133,7 +133,7 @@
   <div class="container">
     <div class="row">	
 		<div class="col-md-12 pricing">
-			<h2>$695 flat fee to Heritage Title for all of our services *</h2>
+			<h1>$695 flat fee to Heritage Title for all of our services *</h1>
 			<h3>We will beat any competitors' pricing by $100. **</h3>
 		</div>
 	</div>
@@ -214,10 +214,10 @@
 		  </tbody>
 		</table>		  
 		</article>
+		<p style="margin-top: 2em; text-align: center;"><span class="tick">&#10004;</span> indicates item is included as part of the $695 flat fee.</p>
 	</div>
 	<div class="row disclaimer">
-		<p><span class="tick">&#10004;</span> indicates item is included as part of the $695 flat fee.</p>
-		<p>* $695 does not include title insurance and 3rd party fees. No other discounts or coupons may be applied to this price.<br/>** This guarantee/discount does not apply to title insurance or 3rd party fees.</p>
+		<p style="font-style: italic;">* $695 does not include title insurance and 3rd party fees. No other discounts or coupons may be applied to this price.<br/>** This guarantee/discount does not apply to title insurance or 3rd party fees.</p>
 	</div>
   </div>
 </section>

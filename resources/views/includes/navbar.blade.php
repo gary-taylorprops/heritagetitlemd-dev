@@ -9,22 +9,25 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ml-auto">
         <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/wire-fraud-warning" style="color: red;">Fraud</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="/#about">About</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="/#services">Services</a>
         </li>
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="/low-fee-title-company">Pricing</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="/#about">About</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="/locations">Locations</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="/#team">Team</a>
+          <a class="nav-link js-scroll-trigger" href="/contact-us">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="/#contact">Contact</a>
+          <a class="nav-link js-scroll-trigger" href="/blog">Blog</a>
         </li>
       </ul>
     </div>

@@ -41,7 +41,7 @@
     		<link rel="stylesheet" href="{{ asset('css/app.css') }}">
     		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <!-- Custom styles for this template -->
-        <link href="css/agency.min.css" rel="stylesheet">
+        <link href="/css/agency.min.css" rel="stylesheet">
 		
     </head>
     <body id="page-top">
@@ -60,7 +60,7 @@
 
       <!-- Contact form JavaScript -->
       <script src="{{ asset('js/jqBootstrapValidation.js') }}"></script>
-      <script src="{{ asset('js/contact_me.js') }}"></script>
+      <!--script src="{{ asset('js/contact_me.js') }}"></script-->
 
       <!-- Custom scripts for this template -->
       <script src="{{ asset('js/agency.min.js') }}"></script>

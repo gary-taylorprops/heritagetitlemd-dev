@@ -21,7 +21,7 @@
 	    width: 70%;
 	    min-width: 300px;
 	    padding: 10px;
-	    margin: 70px auto;
+	    margin: 100px auto;
 	}
 	.col-md-4.locations {
 	    margin-bottom: 2em;
