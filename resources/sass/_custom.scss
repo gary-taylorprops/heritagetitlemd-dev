@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Fenix');
+
+.layer {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+mark, .mark {
+    background-color: $orange !important;
+    color: #ffffff !important;
+    padding: 0 !important;
+}
+
+@media (max-width:767px) {
+	footer {
+		text-align: center !important;
+	}
+}
