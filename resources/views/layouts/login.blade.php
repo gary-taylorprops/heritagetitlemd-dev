@@ -5,6 +5,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="robots" content="noindex">
 
+
         <link rel="shortcut icon" href="{{ asset('favicon.png') }}">
     		<link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     		<link rel="stylesheet" href="{{ asset('css/app.css') }}">

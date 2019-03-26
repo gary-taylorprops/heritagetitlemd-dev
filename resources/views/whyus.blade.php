@@ -123,7 +123,7 @@
 	<div class="row">
 		<div class="header-text">
 			<h3>Average Closing Costs in Maryland</h3>
-			<p>Closing costs can be broken down into two categories: lender origination fees and third-party fees. <strong>The average closing costs in Maryland on a $200,000 loan, as of August 2015, amounted to $1,835, consisting of $1,153 in lender fees and $742 in third-party fees.</strong> While this figure included various service fees, the true total closing costs must include title fees, insurance, prepaid interest, taxes and escrow to be realistic. Typically, Maryland homebuyers should expect total closing costs to run between 2 to 5% of the property purchase price before adding real estate broker fees of up to 6%. <em>Source: <a href="https://www.investopedia.com/walkthrough/guide-buying-house-us/average-closing-costs-state/southern-region-closing-costs/maryland-md-average-closing-costs/" tartget="_blank">Investopedia</a></em></p>
+			<p>Closing costs can be broken down into two categories: lender origination fees and third-party fees. <strong>The average closing costs in Maryland on a $200,000 loan, as of August 2015, amounted to $1,835, consisting of $1,153 in lender fees and $742 in third-party fees.</strong> While this figure included various service fees, the true total closing costs must include title fees, insurance, prepaid interest, taxes and escrow to be realistic. Typically, Maryland homebuyers should expect total closing costs to run between 2 to 5% of the property purchase price before adding real estate broker fees of up to 6%.</p>
 
 			<p>Heritage Title beats the average cost of fees by offering a <strong>$695 flat fee</strong> for all Heritage Title services. See the detailed breakdown below.</p>
 		</div>

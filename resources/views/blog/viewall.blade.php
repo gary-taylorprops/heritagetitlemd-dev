@@ -35,13 +35,13 @@
     </tbody>
 </table>
 
-    	@else
-    		<div class="row">
-	    		<div class="col-md-12">
-    				<p>No Posts Found</p>
-    			</div>
-    		</div>
-    	@endif
+      @else
+        <div class="row">
+          <div class="col-md-12">
+            <p>No Posts Found</p>
+          </div>
+        </div>
+      @endif
   </div>
 </section>
 @endsection

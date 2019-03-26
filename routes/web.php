@@ -33,6 +33,7 @@ Route::get('/wire-fraud-warning', function () {
 // creates all routes to CRUD methods in PostsController
 //Route::resource('posts','PostsController');
 // use blog in url rather than posts
+<<<<<<< HEAD
 Route::resource('/blog','PostsController');
 Route::get('/dashboard/blogs', 'PostsController@admin_index');
 Route::get('/blog/{id}/{slug}', 'PostsController@show');
@@ -40,6 +41,14 @@ Route::get('/blog/{id}/{slug}', 'PostsController@show');
 /* Authentication and Admin */
 Auth::routes();
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+=======
+Route::resource('blog','PostsController');
+Route::get('/dashboard/blogs', 'PostsController@admin_index');
+
+/* Authentication and Admin */
+Auth::routes();
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+>>>>>>> 945718553515c49014d1a2c843b86d462cd4d59c
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/dashboard/{id}/edit-profile', 'DashboardController@edit');
 Route::get('/dashboard/{id}/activity-log', 'DashboardController@activity_log');
