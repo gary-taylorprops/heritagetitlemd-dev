@@ -4,19 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class HTLocation extends Model
 {
     // Table Name
-    protected $table = 'ht_posts';
+    protected $table = 'ht_locations';
 
     // Primary Key
    	public $primaryKey = 'id';
 
    	// Timestamps
    	public $timestamps = true;
-
-   	public function user(){
-   		return $this->belongsTo('App\User');
-   	}
-
 }

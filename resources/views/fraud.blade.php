@@ -17,7 +17,6 @@
 	    background-position: center center;
 	}
 	.header-text {
-	    background-color: rgba(250,250,250,.9);
 	    width: 70%;
 	    min-width: 300px;
 	    padding: 10px;

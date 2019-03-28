@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/locations', function () {
-    return view('locations');
-});
-
 Route::get('/careers', function () {
     return view('careers');
 });
@@ -48,3 +44,6 @@ Route::post('/dashboard/{id}', 'DashboardController@update');
 
 Route::get('/contact-us', 'ContactController@create')->name('contact.create');
 Route::post('/contact-us', 'ContactController@store')->name('contact.store');
+
+Route::resource('/dashboard/ht-locations','HTLocationsController');
+Route::get('/locations', 'HTLocationsController@public_index');

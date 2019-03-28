@@ -3,6 +3,16 @@
 @section('title', 'Heritage Title, Ltd. | Real Estate Settlement Services in Maryland, DC, and Virginia')
 
 @section('content')
+<style type="text/css">
+  @media (min-width:992px){
+    nav img{
+      content:url({{ asset('img/logos/HeritageTitle-white.png') }});
+    }
+  }
+  .navbar-shrink img{
+    content:url({{ asset('img/logos/HeritageTitle.png') }}) !important;
+  }
+</style>
 <!-- Header -->
 <header class="masthead">
   <div class="layer">

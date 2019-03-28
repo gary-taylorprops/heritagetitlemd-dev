@@ -133,7 +133,7 @@
   <div class="container">
     <div class="row">	
 		<div class="col-md-12 pricing">
-			<h1>$695 flat fee to Heritage Title for all of our services *</h1>
+			<h1 style="color: #215a96;">$695 flat fee to Heritage Title for all of our services *</h1>
 			<h3>We will beat any competitors' pricing by $100. **</h3>
 		</div>
 	</div>

@@ -30,6 +30,7 @@ class PostsController extends Controller
         return view('blog.home')->with('blogs',$blogs);
     }
 
+    // For Dashboard View All Posts
     public function admin_index()
     {
         $blogs = Post::orderBy('created_at','desc')->paginate(10);
@@ -67,10 +68,18 @@ class PostsController extends Controller
         $post = new Post;
         $post->title = $request->input('title');
         $post->slug = $request->input('slug');
+        $post->slug = str_replace(' ','-',$post->slug);
+
+
         if($post->slug == ''){
             $post->slug = str_slug($post->title);
         }
 
+        $post->image_url = $request->input('image'); 
+        $post->image_url = str_replace(' ','-',$post->image_url);
+        if($post->image_url == ''){
+            $post->image_url = 'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff';
+        } 
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
         $post->save();
@@ -94,6 +103,10 @@ class PostsController extends Controller
         $user_id = $blog->user_id;
         //Get user id by post from different table
         $user = User::find($user_id);
+
+        if($blog->image_url == ''){
+            $blog->image_url = 'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff';
+        } 
         
         return view('blog.post')->with(['blog'=>$blog,'user'=>$user]);
         //return redirect('blog/'.$id.'/'.$blog->slug)->with(['blog'=>$blog,'user'=>$user]);
@@ -131,9 +144,12 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->title = $request->input('title');
         $post->slug = $request->input('slug');
+        $post->slug = str_replace(' ','-',$post->slug);
         if($post->slug == ''){
             $post->slug = str_slug($post->title);
         }
+
+        $post->image_url = $request->input('image');
         $post->body = $request->input('body');
         $user = Auth::user();
         $post->save();
@@ -152,7 +168,7 @@ class PostsController extends Controller
         $post = Post::find($id);
         $user = Auth::user();
         $post->delete();
-        return redirect('/dashboard')->with(['success'=>'Post Deleted','user'=>$user]);
+        return redirect('/dashboard/blogs')->with(['success'=>'Post Deleted','user'=>$user]);
     }
 
 }

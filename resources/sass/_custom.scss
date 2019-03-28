@@ -10,6 +10,24 @@ mark, .mark {
     padding: 0 !important;
 }
 
+.col-md-4.blog {
+    padding: 1em;
+}
+
+.blog-inner {
+    border: 1px solid #ff8c42;
+    padding: 2em;
+    border-radius: .25rem;
+}
+
+.page-item.active .page-link {
+    background-color: #d6efff !important;
+    border-color: #d6efff !important;
+}
+.page-link{
+	color: #215a96 !important;
+}
+
 @media (max-width:767px) {
 	footer {
 		text-align: center !important;
