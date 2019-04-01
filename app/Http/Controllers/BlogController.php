@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class BlogController extends Controller
 {
@@ -20,6 +21,20 @@ class BlogController extends Controller
     {
         //
         return view('blog.post');
+    }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('q');
+        $posts = Post::where('title','LIKE','%'.$query.'%')->orWhere('body','LIKE','%'.$query.'%')->paginate(10);
+        if(count($posts) > 0)
+        {
+            return view('blog.search')->with(['posts'=>$posts,'query'=>$query]);
+        }
+        else 
+        {
+            return view ('blog.home')->withMessage('No Details found. Try to search again !');
+        }
     }
 
     /**

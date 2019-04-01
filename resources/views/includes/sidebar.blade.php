@@ -15,6 +15,11 @@
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Dashboard</span></a>
   </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="/" target="_blank">
+      <i class="fas fa-home"></i>
+      <span>Homepage</span></a>
+  </li>
 
   <!-- Divider -->
   <hr class="sidebar-divider">
@@ -86,8 +91,8 @@
     <div id="collapseLocations" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <!--h6 class="collapse-header">Login Screens:</h6-->
-        <a class="collapse-item" href="/dashboard/ht-locations">View All HT Offices</a>
-        <a class="collapse-item" href="/dashboard/ht-locations/create">Add New HT Office</a>
+        <a class="collapse-item" href="/ht-locations">View All HT Offices</a>
+        <a class="collapse-item" href="/ht-locations/create">Add New HT Office</a>
       </div>
     </div>
   </li>

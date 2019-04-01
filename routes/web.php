@@ -31,13 +31,16 @@ Route::get('/wire-fraud-warning', function () {
 // use blog in url rather than posts
 
 Route::resource('/blog','PostsController');
+Route::any('/blog-search','BlogController@search');
 Route::get('/dashboard/blogs', 'PostsController@admin_index');
 Route::get('/blog/{id}/{slug}', 'PostsController@show');
 
 /* Authentication and Admin */
 Auth::routes();
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 Route::get('/dashboard', 'DashboardController@index');
+Route::any('/dashboard/search','DashboardController@search');
 Route::get('/dashboard/{id}/edit-profile', 'DashboardController@edit');
 Route::get('/dashboard/{id}/activity-log', 'DashboardController@activity_log');
 Route::post('/dashboard/{id}', 'DashboardController@update');
@@ -45,5 +48,5 @@ Route::post('/dashboard/{id}', 'DashboardController@update');
 Route::get('/contact-us', 'ContactController@create')->name('contact.create');
 Route::post('/contact-us', 'ContactController@store')->name('contact.store');
 
-Route::resource('/dashboard/ht-locations','HTLocationsController');
+Route::resource('/ht-locations','HTLocationsController');
 Route::get('/locations', 'HTLocationsController@public_index');

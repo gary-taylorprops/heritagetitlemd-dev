@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Blogs | Heritage Title, Ltd. | Real Estate Settlement Services in Maryland, DC, and Virginia')
+@section('title', 'Search Blogs | Heritage Title, Ltd. | Real Estate Settlement Services in Maryland, DC, and Virginia')
 
 @section('content')
 
@@ -92,7 +92,7 @@
 	  letter-spacing: 2px;
 	  text-transform: uppercase;
 	}
-	.item p, .header-text p {
+	.header-text p {
 	  font-size: 16px;
 	  font-family: 'Merriweather', serif;
 	}
@@ -129,8 +129,7 @@
 			<form action="/blog-search" method="POST" role="search">
 			    {{ csrf_field() }}
 			    <div class="input-group">
-			        <input type="text" class="form-control" name="q"
-			            placeholder="Search Blogs"> 
+			        <input type="text" class="form-control" name="q" placeholder="Search Blogs"> 
 		            <span class="input-group-btn">
 			            <button type="submit" class="btn btn-default" style="background: #fed18c;color: #666;">
 			                <i class="fa fa-search"></i>
@@ -144,57 +143,33 @@
 </div>
 <!-- Start Blog Layout -->
 <div class="container">
-  <div class="row">
-  	@foreach($blogs as $blog)
-    <div class="col-md-6 item">
-      <div class="item-in">
-        <h4><a href="/blog/{{ $blog->id }}/{{ $blog->slug }}">{{ $blog->title }}</a></h4>
-        <div class="seperator"></div>
-        <p>{{ str_limit(strip_tags(html_entity_decode($blog->body)),180) }}</p>
-        <a class="read-more" href="/blog/{{ $blog->id }}/{{ $blog->slug }}">Read More
-          <i class="fa fa-long-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-    @endforeach
+  <div class="row" style="display:block;">
+  		<p><a href="/blog">Back to all blogs</a></p>
+  	   <p>The search results for your query: <strong>{{ $query }}</strong></p>
+  	   <table class="table table-striped">
+  	       <thead>
+  	           <tr>
+  	               <th>Title</th>
+  	               <th>Description</th>
+  	               <th>View Post</th>
+  	           </tr>
+  	       </thead>
+  	       <tbody>
+  	           @foreach($posts as $post)
+  	           <tr>
+  	               <td>{{$post->title}}</td>
+  	               <td>{{ str_limit(strip_tags(html_entity_decode($post->body)),180) }}</td>
+  	               <td><a class="btn btn-primary" href="/blog/{{$post->id}}/{{$post->slug}}">View</a>
+  	           </tr>
+  	           @endforeach
+  	       </tbody>
+  	   </table>
   </div>
   <div class="row">
   	<div class="col-md-12">
-  		{{ $blogs->links() }}
+  		{{ $posts->links() }}
   	</div>
   </div>
 </div>
 
-
-
-<!--section id="blogs">
-  <div class="container">
-  	<div class="row">
-    	@if(count($blogs) > 0)
-    		@foreach($blogs as $blog)
-	    		<div class="col-md-4 blog">
-	    			<div class="blog-inner">
-		    			<h4><a href="/blog/{{ $blog->id }}/{{ $blog->slug }}">{{ $blog->title }}</a></h4>
-		    			<p>{{ str_limit(strip_tags(html_entity_decode($blog->body)),100) }}<br>
-		    					{{ $blog->created_at->format('m-d-Y') }}
-		    				<br>
-		    			<a href="/blog/{{ $blog->id }}/{{ $blog->slug }}">Read more</a></p>
-		    		</div>
-	    		</div>
-    		@endforeach
-	</div>
-	<div class="row">
-		<div class="col-md-12" style="margin: 0 auto;">
-			{{ $blogs->links() }}
-		</div>
-	</div>
-    	@else
-    		<div class="row">
-	    		<div class="col-md-12">
-    				<p>No Posts Found</p>
-    			</div>
-    		</div>
-    	@endif
-  </div>
-</section-->
 @endsection

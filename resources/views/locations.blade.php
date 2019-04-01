@@ -48,7 +48,7 @@
 				@else
 				@endif
 				{{$location->city}}, {{$location->state}} {{$location->zip}}<br>
-			<a href="{{$location->url}}" target="_blank">Get Directions</a></p>
+			<a href="{{$location->map_url}}" target="_blank">Get Directions</a></p>
 		</div>
 		@endforeach
 	</div>

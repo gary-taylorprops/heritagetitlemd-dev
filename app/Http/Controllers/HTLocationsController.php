@@ -18,7 +18,7 @@ class HTLocationsController extends Controller
      */
     public function index()
     {
-        $locations = HTLocation::orderBy('name')->get();
+        $locations = HTLocation::orderBy('created_at','desc')->get();
         $user = Auth::user();
         return view('ht-location.index')->with(['locations'=>$locations,'user'=>$user]);
     }
@@ -47,15 +47,10 @@ class HTLocationsController extends Controller
      */
     public function store(Request $request)
     {
-        /*$this->validate($request,[
+        $this->validate($request,[
             'name' => 'required',
-            'address1'  => 'required',
-            'city'  => 'required',
-            'state'  => 'required',
-            'zip'  => 'required',
-            'url'  => 'required'
-        ]); */
-
+        ]);
+         
         // Create Location
         $location = new HTLocation;
         $location->name = $request->input('name');
@@ -65,10 +60,10 @@ class HTLocationsController extends Controller
         $location->state = $request->input('state');
         $location->zip = $request->input('zip');
         $location->map_url = $request->input('map_url');
-        $user = Auth::user();
+        $user = auth()->user()->id;
         $location->save();
 
-        return redirect('/dashboard/ht-locations')->with(['success'=>'Location Created','user'=>$user]);
+        return redirect('/ht-locations')->with(['success'=>'Location Created','user'=>$user]);
     }
 
     /**
@@ -121,7 +116,7 @@ class HTLocationsController extends Controller
         $user = Auth::user();
         $location->save();
 
-        return redirect('/dashboard/ht-locations')->with(['success'=>'Post Updated','user'=>$user]);
+        return redirect('/ht-locations')->with(['success'=>'Post Updated','user'=>$user]);
     }
 
     /**
@@ -135,6 +130,6 @@ class HTLocationsController extends Controller
         $location = HTLocation::find($id);
         $user = Auth::user();
         $location->delete();
-        return redirect('/dashboard/ht-locations')->with(['success'=>'Location Deleted','user'=>$user]);
+        return redirect('/ht-locations')->with(['success'=>'Location Deleted','user'=>$user]);
     }
 }

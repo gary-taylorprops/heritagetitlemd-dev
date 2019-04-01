@@ -7,7 +7,18 @@
   </button>
 
   <!-- Topbar Search -->
-  <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+  <form action="/dashboard/search" method="POST" role="search" class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+      {{ csrf_field() }}
+      <div class="input-group">
+          <input type="text" class="form-control bg-light border-0 small" name="q" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2"> 
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-search fa-sm"></i>
+              </button>
+            </div>
+      </div>
+  </form>
+  <!--form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
     <div class="input-group">
       <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
       <div class="input-group-append">
@@ -16,7 +27,7 @@
         </button>
       </div>
     </div>
-  </form>
+  </form-->
 
   <!-- Topbar Navbar -->
   <ul class="navbar-nav ml-auto">
@@ -54,10 +65,10 @@
           <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
           Profile
         </a>
-        <a class="dropdown-item" href="/dashboard/{{ $user->id }}/activity-log">
+        <!--a class="dropdown-item" href="/dashboard/{{ $user->id }}/activity-log">
           <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
           Activity Log
-        </a>
+        </a-->
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="/logout" data-toggle="modal" data-target="#logoutModal">
           <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>

@@ -91,5 +91,20 @@ class DashboardController extends Controller
         return view('dashboard.activity')->with(['user'=>$user,'posts'=>$posts]);
     }
 
+    public function search(Request $request)
+    {
+        $user = auth()->user();
+        $query = $request->input('q');
+        $posts = Post::where('title','LIKE','%'.$query.'%')->orWhere('body','LIKE','%'.$query.'%')->paginate(10);
+        if(count($posts) > 0)
+        {
+            return view('dashboard.search')->with(['posts'=>$posts,'query'=>$query,'user'=>$user]);
+        }
+        else
+        {
+            return view ('dashboard.home')->withMessage('No Details found. Try to search again !');
+        }
+    }
+
 
 }

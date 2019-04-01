@@ -4,7 +4,7 @@
 <section id="locations">
   <div class="container">
     <div class="row" style="align-items: baseline;">
-      <div class="col-md-6"><a href="/dashboard/ht-locations/create" class="btn btn-primary" style="margin: 2em;">Create Location</a></div>
+      <div class="col-md-6"><a href="/ht-locations/create" class="btn btn-primary" style="margin: 2em;">Create Location</a></div>
     </div>
     <table class="table table-striped">
       <thead>
@@ -26,7 +26,7 @@
           	{{ $location->address2 }}<br>
           	{{ $location->city }}, {{ $location->state }} {{ $location->zip }}<br>
           </td>
-          <td><a href="/dashboard/ht-locations/{{$location->id}}/edit" class="btn btn-primary">Edit</a></td>
+          <td><a href="/ht-locations/{{$location->id}}/edit" class="btn btn-primary">Edit</a></td>
           <td><a class="btn btn-danger" href="" data-toggle="modal" data-target="#deleteModal">Delete</td>
         </tr>
         <!-- Delete Modal-->
