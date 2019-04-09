@@ -27,6 +27,7 @@ class BlogController extends Controller
     {
         $query = $request->input('q');
         $posts = Post::where('title','LIKE','%'.$query.'%')->orWhere('body','LIKE','%'.$query.'%')->paginate(10);
+        $pagination = $posts->appends(array('q' => $query));
         if(count($posts) > 0)
         {
             return view('blog.search')->with(['posts'=>$posts,'query'=>$query]);

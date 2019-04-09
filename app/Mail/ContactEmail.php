@@ -16,6 +16,7 @@ class ContactEmail extends Mailable
      *
      * @return void
      */
+    
     public $contact;
 
     public function __construct($contact)
