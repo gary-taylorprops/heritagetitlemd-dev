@@ -150,6 +150,10 @@ class PostsController extends Controller
         }
 
         $post->image_url = $request->input('image');
+        $post->image_url = str_replace(' ','-',$post->image_url);
+        if($post->image_url == ''){
+            $post->image_url = 'https://images.unsplash.com/photo-1516455590571-18256e5bb9ff';
+        } 
         $post->body = $request->input('body');
         $user = Auth::user();
         $post->save();
