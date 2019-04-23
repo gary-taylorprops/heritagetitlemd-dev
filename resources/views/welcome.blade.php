@@ -88,7 +88,7 @@
 </section>
 
 <!-- Team -->
-<!--section class="bg-light" id="team">
+<section class="bg-light" id="team">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -109,7 +109,7 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="mailto:donna@heritagetitlemd.com">
                 <i class="fas fa-envelope"></i>
               </a>
             </li>
@@ -128,7 +128,7 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="mailto:princess@heritagetitlemd.com">
                 <i class="fas fa-envelope"></i>
               </a>
             </li>
@@ -147,7 +147,7 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="mailto:krystyn@heritagetitlemd.com">
                 <i class="fas fa-envelope"></i>
               </a>
             </li>
@@ -166,7 +166,26 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#">
+              <a href="mailto:jackie@heritagetitlemd.com">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="team-member">
+          <img class="mx-auto" src="{{ asset('img/team/pawn.png') }}" alt="Crisy "Jackie" Eucare">
+          <h4>Crisy Burns</h4>
+          <p class="text-muted">Closer</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="tel:8669134095">
+                <i class="fas fa-phone"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="mailto:cburns@heritagetitlemd.com">
                 <i class="fas fa-envelope"></i>
               </a>
             </li>
@@ -174,12 +193,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <p class="large text-muted">Interested in joining our team? Head over to our <a href="/careers">careers</a> page and learn more about career opportunities at Heritage Title.</p>
-      </div>
-    </div>
   </div>
-</section-->
+</section>
 
 @endsection

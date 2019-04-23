@@ -26,7 +26,7 @@ class AddImageUrlToHtPosts extends Migration
     public function down()
     {
         Schema::table('ht_posts', function (Blueprint $table) {
-            $table->dropColumn('user_id');
+            $table->dropColumn('image_url');
         });
     }
 }
